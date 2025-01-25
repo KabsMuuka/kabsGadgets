@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
-import User from "../../model/User.js";
-import middleware from "../../middleware/middleware.js";
+import User from "../model/User.js";
+import middleware from "../middleware/middleware.js";
 
 router.get("/", middleware, async (req, res) => {
   try {

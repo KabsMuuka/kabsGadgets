@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 const SALTROUNDS = 10;
 
 //database User
-import User from "../../model/User.js";
+import User from "../model/User.js";
 
 router.post("/", (req, res) => {
   const { userRole, phoneNumber, password } = req.body;

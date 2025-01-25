@@ -4,7 +4,7 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
-import Post from "../../model/Post.js";
+import Post from "../model/Post.js";
 
 // Setting up Multer Storage Engine
 const storage = multer.diskStorage({

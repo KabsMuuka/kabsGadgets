@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 import jwt from "jsonwebtoken";
 
-import { generateAccessToken } from "../../utils/helpers.js";
+import { generateAccessToken } from "../utils/helpers.js";
 
 router.get("/", (req, res) => {
   const refreshToken = req.cookies.refreshToken;
