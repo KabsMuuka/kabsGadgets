@@ -18,15 +18,15 @@ import sequelize from "./config/db.js";
 import AdminUser from "./model/AdminUser.js";
 import User from "./model/User.js";
 //route/api
-import refreshToken from "./route/api/refreshToken.js";
-import registerUser from "./route/api/register.js";
-import loginUser from "./route/api/loginUser.js";
-import savePost from "./route/api/savePost.js";
-import fetchPost from "./route/api/fetchPost.js";
-import me from "./route/api/me.js";
-import users from "./route/api/users.js";
+import refreshToken from "./api/refreshToken.js";
+import registerUser from "./api/register.js";
+import loginUser from "./api/loginUser.js";
+import savePost from "./api/savePost.js";
+import fetchPost from "./api/fetchPost.js";
+import me from "./api/me.js";
+import users from "./api/users.js";
 //admin
-import loginAdminUser from "./route/api/loginAdminUser.js";
+import loginAdminUser from "./api/loginAdminUser.js";
 
 // Middleware
 

@@ -2,12 +2,9 @@ import express from "express";
 const router = express.Router();
 // import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import AdminUser from "../../model/AdminUser.js";
+import AdminUser from "../model/AdminUser.js";
 
-import {
-  generateAccessToken,
-  generateRefreshToken,
-} from "../../utils/helpers.js";
+import { generateAccessToken, generateRefreshToken } from "../utils/helpers.js";
 
 //login
 router.post("/", async (req, res) => {
