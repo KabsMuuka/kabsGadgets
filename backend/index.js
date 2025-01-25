@@ -7,9 +7,9 @@ dotenv.config();
 
 import http from "http";
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 // const path = require("path");
-import { Server } from "socket.io";
+// import { Server } from "socket.io";
 
 import bodyParser from "body-parser";
 import cors from "cors";
@@ -37,23 +37,23 @@ const corsOptions = {
 };
 // Enable CORS for all routes
 
-//app build
-import path from "path";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// //app build
+// import path from "path";
+// import { fileURLToPath } from "url";
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-const buildPath = path.join(__dirname, "client/build");
-app.use(express.static(buildPath));
+// const buildPath = path.join(__dirname, "client/build");
+// app.use(express.static(buildPath));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
-  (err) => {
-    if (err) {
-      res.status(500).send(err);
-    }
-  };
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+//   (err) => {
+//     if (err) {
+//       res.status(500).send(err);
+//     }
+//   };
+// });
 
 app.use(cors(corsOptions));
 
@@ -82,6 +82,6 @@ sequelize
   .catch((err) => console.error("Error syncing database:", err));
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
